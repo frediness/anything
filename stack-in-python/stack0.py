@@ -36,7 +36,9 @@ def cetakBiner(d):
         st = st + str(f.pop())
 
     return st
-
+print("================================")
+#1
+print("1.")
 def cetakHex(d):
     f = Stack()
     div = "0123456789ABCDEF"
@@ -51,3 +53,18 @@ def cetakHex(d):
         st = st + div[f.pop()]
 
     return st
+print(cetakHex(55))
+print("================================")
+#2
+print("2.")
+for i in range(16):
+	if i%3 == 0:
+		print(i,'push')		
+print("================================")
+#3
+print("3.")
+for i in range(16):
+	if i%3 == 0:
+		print(i,'push')
+	elif i%4 == 0:
+		print('pop')
