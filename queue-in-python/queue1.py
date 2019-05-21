@@ -10,10 +10,10 @@ class PriorityQueue(object):
         self.qlist.append(entry)
     def dequeue(self):
         max = 0
-        for i in self.qlist:
-            x = i.priority
-            if i.priority < max:
-                max = i.priority
+        for i in range(len(self.qlist)):
+            x = self.qlist[max].priority
+            if self.qlist[i].priority < max:
+                max = self.qlist[i].priority
         item = self.qlist[max]
         del self.qlist[max]
         return item
