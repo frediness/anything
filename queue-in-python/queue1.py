@@ -9,7 +9,14 @@ class PriorityQueue(object):
         entry = _PriorityQEntry(data, priority)
         self.qlist.append(entry)
     def dequeue(self):
-        self.qlist.pop()
+        max = 0
+        for i in self.qlist:
+            x = i.priority
+            if i.priority < max:
+                max = i.priority
+        item = self.qlist[max]
+        del self.qlist[max]
+        return item
     def getFrontMost(self):
         return self.qlist[0]
     def getRearMost(self):
